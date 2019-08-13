@@ -1,0 +1,15 @@
+<form novalidate>
+    <auth-notification></auth-notification>
+    
+  <mat-form-field style="width: 100%;">
+    <input matInput name="login" [(ngModel)]="model.login" placeholder="{{'AUTH.LOGIN' | translate}}">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <input type="password" matInput [(ngModel)]="model.password" name="password"
+      placeholder="{{'AUTH.PASSWORD' | translate}}">
+  </mat-form-field>
+
+<button type="button" mat-button class="float-left" (click)="login()">{{'AUTH.LOGIN_BUTTON' | translate}}</button>
+<button  mat-button color="primary" class="float-left" (click)="navigateToSignUp()">{{'AUTH.SIGNUP' | translate}}</button>
+<button  mat-button color="primary" class="float-left" (click)="navigateToForgotPasswordForm()">{{'AUTH.FORGOT_PASSWORD_BUTTON_LINK' | translate}}</button>

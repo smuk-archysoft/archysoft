@@ -1,0 +1,52 @@
+<div>
+    <button (click)="downloadPdf()" class="btn btn-link">Download PDF</button>
+</div>
+
+<div id="cv" class="instaFade">
+
+    <div class="mainDetails">
+        <div id="headshot" class="quickFade">
+            <img *ngIf="!employee.photo" src="../../../../assets/images/default/headshot.jpg" alt="employee`s photo">
+            <img *ngIf="employee.photo" src="data:image/jpeg;base64,{{employee.photo}}" alt="employee`s photo">
+        </div>
+
+        <div id="name">
+            <h1 class="quickFade delayTwo">{{employee.firstName}}</h1>
+            <h2 class="quickFade delayThree">{{employee.lastName}}</h2>
+        </div>
+
+        <div id="contactDetails" class="quickFade delayFour">
+            <ul>
+                <li>email: <a href="#" target="_blank">{{employee.email}}</a></li>
+                <li>skype: <a href="#">{{employee.skype}}</a></li>
+                <li>phone: {{employee.phoneNumber}}</li>
+                <li>location: {{employee.country}}, {{employee.city}}</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="mainArea" class="quickFade delayFive">
+        <section *ngIf="employee.description">
+            <article>
+                <div class="sectionTitle">
+                    <h1>Personal Profile</h1>
+                </div>
+
+                <div class="sectionContent">
+                        <h2>{{employee.description.title}}</h2>
+                    <p>{{employee.description.text}}</p>
+                </div>
+            </article>
+            <div class="clear"></div>
+        </section>
+
+        <app-experience *ngIf="employee.experiences" [experience]="employee.experiences"></app-experience>
+
+        <app-skills *ngIf="employee.skills" [skills]="employee.skills"></app-skills>
+
+        <app-education *ngIf="employee.educations" [educations]="employee.educations"></app-education>
+
+        <app-languages *ngIf="employee.languages" [languages]="employee.languages"></app-languages>
+    </div>
+</div>

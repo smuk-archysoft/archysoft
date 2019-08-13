@@ -1,0 +1,50 @@
+export const locale = {
+    language: 'ru',
+    data: {
+        AUTH: {
+            SERVER_ERROR: 'Ошибка сервера. Попробуйте позже.',
+            INVALID_LOGIN_OR_PASSWORD: 'Неправильный логин или пароль.',
+            LOGIN: 'Логин',
+            LOGIN_BUTTON: 'Войти',
+            PASSWORD: 'Пароль',
+            CONFIRM_EMAIL_SUCCESS: 'Подтверждение Email прошло успешно',
+            CONFIRM_EMAIL_FAILURE: 'Неверный пользователь или код подтверждения',
+            TIMER_REDIRECT_FROM_CONFIRM_EMAIL_TO_LOGIN: 'Вы будете перенаправлены на предыдущую страницу через 5 секунд',
+            LOGIN_VALIDATION: "Укажте ваш логин",
+            PASSWORD_VALIDATION: "Укажите ваш пароль",
+            PASSWORD_CONFIRM: 'Потдверждение пароля',
+            PASSWORD_CONFIRM_VALIDATION: "Потдверждение пароля не совпадает с паролем",
+            SIGNUP: 'Зарегистрироваться',
+            SIGNUP_USER_EXISTS: 'Этот пользователь уже существует',
+            EMAIL: 'Email',
+            USER_NAME: 'Имя Пользователя',
+            FIRST_NAME: 'Имя',
+            LAST_NAME: 'Фамилия',
+            ID: 'ID',
+            EMAIL_VALIDATION: "Укажите ваш email",
+            USER_NAME_VALIDATION: "Укажите ваше имя",
+            FORGOT_PASSWORD_BUTTON_LINK: 'Забыли пароль?',
+            CHANGE_PASSWORD_BUTTON: 'Сменить пароль',
+            BACK_TO_LOGIN_PAGE_BUTTON_LINK: 'Вернуться на страницу авторизации',
+            ENTER_EMAIL_NOTIFICATION: 'Пожалуйста, введите ваш e-mail. Вы получите письмо со ссылкой для создания нового пароля.',
+            EMAIL_IS_SENT_NOTIFICATION: 'На ваш e-mail было отправлено письмо с ссылкой для создания нового пароля.',
+            INVALID_EMAIL: "Неверный e-mail",
+            EMAIL_IS_REQUIRED: 'Необходимо ввести email',           
+            LOGOUT: 'Выйти',
+            CONFIRM_PASSWORD: 'Подтвердите пароль',
+            RECOVER_PASSWORD_BUTTON: 'Восстановить пароь'
+        },
+        EMPLOYEES: {
+            EMAIL: 'Email',
+            USER_NAME: 'Имя Пользователя',
+            FIRST_NAME: 'Имя',
+            LAST_NAME: 'Фамилия',
+            ID: 'ID',
+            FILTER: 'Фильтр',
+            SWITCH_TO_GRID_VIEW: 'Отобразить как таблицу',
+            SWITCH_TO_CARDS_VIEW: 'Отобразить как карточки',
+            VIEW_DETAILS: 'Подробнее',
+            SORT_BY: 'Сортировать'
+        }
+    }
+};

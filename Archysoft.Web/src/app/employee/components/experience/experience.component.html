@@ -1,0 +1,24 @@
+<section>
+    <div class="sectionTitle">
+        <h1>Work Experience</h1>
+    </div>
+
+    <div class="sectionContent">
+
+        <ul *ngFor='let item of experience'>
+            <li>
+                <article>
+                    <h2>{{item.position}}</h2>
+                    <p class="subDetails">{{item.beginDate | date:'MMMM y'}} -
+                        <span *ngIf='item.endDate'>{{item.endDate | date:'MMMM y'}}</span>
+                        <span *ngIf='!item.endDate'>Current time</span>
+                    </p>
+                    <p>{{item.description}}</p>
+                </article>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="clear"></div>
+</section>

@@ -1,0 +1,21 @@
+<section>
+    <div class="sectionTitle">
+        <h1>Education</h1>
+    </div>
+
+    <div class="sectionContent">
+        <ul>
+            <li *ngFor="let item of educations">
+                <article>
+                    <h2>{{item.school}}</h2>
+                    <p class="subDetails">{{item.degree}}</p>
+                    <p>{{item.yearAttendedFrom}} - 
+                        <span *ngIf='item.yearAttendedTo'>{{item.yearAttendedTo}}</span>
+                        <span *ngIf='!item.yearAttendedTo'>Current time</span>
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</section>

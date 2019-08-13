@@ -1,0 +1,54 @@
+<div *ngIf="!loading">
+  <div>
+    <button type="button" class="btn btn-outline-secondary" (click)="switchToCardsView()">{{'EMPLOYEES.SWITCH_TO_CARDS_VIEW' | translate}}</button>
+  </div>
+
+  <mat-form-field>
+    <input matInput (keyup)="applyFilterEmployees($event.target.value)" placeholder="{{'EMPLOYEES.FILTER' | translate}}">
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortEmployees($event)">
+    
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> {{'EMPLOYEES.ID' | translate}} </th>
+      <td mat-cell *matCellDef="let employee"> {{employee.id}} </td>
+    </ng-container>
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="userName"> {{'EMPLOYEES.USER_NAME' | translate}} </th>
+      <td mat-cell *matCellDef="let employee"> {{employee.userName}} </td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="email"> {{'EMPLOYEES.EMAIL' | translate}} </th>
+      <td mat-cell *matCellDef="let employee"> {{employee.email}} </td>
+    </ng-container>
+
+    <!-- First Name Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="firstName"> {{'EMPLOYEES.FIRST_NAME' | translate}} </th>
+      <td mat-cell *matCellDef="let employee"> {{employee.firstName}} </td>
+    </ng-container>
+
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="lastName"> {{'EMPLOYEES.LAST_NAME' | translate}} </th>
+      <td mat-cell *matCellDef="let employee"> {{employee.lastName}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="goToEmployeeDetails(row)"></tr>
+  </table>
+
+  <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+    (page)="setEmployees($event)"></mat-paginator>
+</div>
+
+<div class="d-flex justify-content-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

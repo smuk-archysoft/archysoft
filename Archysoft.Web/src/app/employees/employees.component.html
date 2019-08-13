@@ -1,0 +1,10 @@
+<app-header></app-header>
+<main class="container">
+  <div *ngIf="!isCardsViewSwitched;else unset">
+    <employees-grid (switchToView)="switchToView()" (childEvent)="goToEmployee($event)"></employees-grid>
+  </div>
+
+  <ng-template #unset>
+    <employees-cards (switchToView)="switchToView()" (childEvent)="goToEmployee($event)"></employees-cards>
+  </ng-template>
+</main>
