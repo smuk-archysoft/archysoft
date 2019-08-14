@@ -31,13 +31,14 @@ namespace Archysoft.Domain.Model.Services.Concrete
                 Host = config.Host,
                 Port = config.Port,
                 EnableSsl = config.EnableSsl,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = config.UseDefaultCredentials,
                 Credentials = new NetworkCredential(config.Email, config.Password)
             };
 
             using (var msg = new MailMessage(config.Email, email, subject, message))
             {
-                //emailClient.Send(msg);
+                emailClient.Send(msg);
             }
         }
     }
