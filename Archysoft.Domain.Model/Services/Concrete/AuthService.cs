@@ -37,7 +37,7 @@ namespace Archysoft.Domain.Model.Services.Concrete
             {
                 UserName = model.Username,
                 Email = model.Email,
-                EmailConfirmed = false
+                EmailConfirmed = true
             }, model.Password);
 
             if (!isCreateUser.Succeeded)

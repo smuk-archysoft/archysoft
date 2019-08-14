@@ -37,7 +37,7 @@ namespace Archysoft.Domain.Model.Services.Concrete
 
             using (var msg = new MailMessage(config.Email, email, subject, message))
             {
-                emailClient.Send(msg);
+                //emailClient.Send(msg);
             }
         }
     }
