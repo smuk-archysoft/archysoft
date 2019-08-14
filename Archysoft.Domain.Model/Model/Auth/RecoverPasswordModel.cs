@@ -17,7 +17,7 @@ namespace Archysoft.Domain.Model.Model.Auth
             RuleFor(x => x.UserId).NotEmpty();
             RuleFor(x => x.Token).NotEmpty();
             RuleFor(x => x.Password)
-                .Equal(x => x.PasswordConfirm).NotNull().NotEmpty().Length(6, 20)
+                .Equal(x => x.PasswordConfirm).NotNull().NotEmpty().Length(1, 20)
                 .WithMessage("Password doesn't match");
         }
     }
