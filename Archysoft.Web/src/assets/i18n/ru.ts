@@ -2,6 +2,7 @@ export const locale = {
     language: 'ru',
     data: {
         AUTH: {
+            NON_AUTORIZE_ERROR: 'Ошибка авторизации.',
             SERVER_ERROR: 'Ошибка сервера. Попробуйте позже.',
             INVALID_LOGIN_OR_PASSWORD: 'Неправильный логин или пароль.',
             LOGIN: 'Логин',

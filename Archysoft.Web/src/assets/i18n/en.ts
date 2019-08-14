@@ -2,6 +2,7 @@ export const locale = {
     language: 'en',
     data: {
         AUTH: {
+            NON_AUTORIZE_ERROR: 'Non authorize error.',
             SERVER_ERROR: 'Internal server error please try again later.',
             INVALID_LOGIN_OR_PASSWORD: 'Invalid login or password',
             LOGIN: 'Login',
