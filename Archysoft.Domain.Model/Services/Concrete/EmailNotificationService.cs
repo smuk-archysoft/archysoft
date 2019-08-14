@@ -20,6 +20,7 @@ namespace Archysoft.Domain.Model.Services.Concrete
             _settingsService = settingsService;
             _userRepository = userRepository;
         }
+
         public void SendMail(string email, string subject, string message)
         {
             var config = _settingsService.EmailNotificationSettings;

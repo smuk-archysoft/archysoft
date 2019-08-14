@@ -51,7 +51,7 @@ namespace Archysoft.Domain.Model.Services.Concrete
             if (user != null)
             {
                 string url = String.Format("{2}/auth/confirm-email?UserId={0}&Code={1}", user.Id, token, uiUrl);
-                _emailNotificationService.SendMail(model.Email, "Notification", url);
+                _emailNotificationService.SendMail(model.Email, "Notification", $"For confirm email, follow the link: {url}");
             }
             else
             {
