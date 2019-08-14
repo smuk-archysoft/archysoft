@@ -54,7 +54,7 @@ namespace Archysoft.Web.Api
 
             services.AddIdentity<User, Role>(opts =>
                 {
-                    opts.Password.RequiredLength = 5;
+                    opts.Password.RequiredLength = 1;
                     opts.Password.RequireNonAlphanumeric = false;
                     opts.Password.RequireLowercase = false;
                     opts.Password.RequireUppercase = false;
