@@ -18,6 +18,7 @@ export const locale = {
             SIGNUP: 'SignUp',
             SIGNUP_USER_EXISTS: 'This User already exists',
             EMAIL: 'Email',
+            EMAIL_NOT_CONFIRMED: "This email not confirmed yet. Please check your email.",
             USER_NAME:'Name',
             FIRST_NAME: 'First Name',
             LAST_NAME: 'Last Name',

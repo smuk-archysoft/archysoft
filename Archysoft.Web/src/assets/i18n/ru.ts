@@ -18,6 +18,7 @@ export const locale = {
             SIGNUP: 'Зарегистрироваться',
             SIGNUP_USER_EXISTS: 'Этот пользователь уже существует',
             EMAIL: 'Email',
+            EMAIL_NOT_CONFIRMED: "Этот електронный адрес пока не подтвержден. Пожалуйста проверьте ваш email.",
             USER_NAME: 'Имя Пользователя',
             FIRST_NAME: 'Имя',
             LAST_NAME: 'Фамилия',

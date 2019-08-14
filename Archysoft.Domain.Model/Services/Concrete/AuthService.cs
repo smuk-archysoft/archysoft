@@ -94,7 +94,7 @@ namespace Archysoft.Domain.Model.Services.Concrete
 
             var token = _userRepository.GeneratePasswordResetToken(user);
             string uiUrl = _settingsService.UIUrlSettings.Url;
-            string url = $"{uiUrl}/auth/recover-password/?id={user.Id}&token={HttpUtility.UrlEncode(token)}";           
+            string url = $"{uiUrl}/auth/recover-password/?id={user.Id}&token={HttpUtility.UrlEncode(token)}";
 
             _emailNotificationService.SendMail(user.Email,"Recover Password", $"To reset the password, follow the link: {url}");
         }
@@ -105,6 +105,10 @@ namespace Archysoft.Domain.Model.Services.Concrete
             if (user == null)
             {
                 throw new BusinessException(OperationResultCode.Error, "Invalid User");
+            }
+            else if (!user.EmailConfirmed)
+            {
+                throw new BusinessException(OperationResultCode.Error, "Email Not Confirmed");
             }
 
             return GenerateToken(user);

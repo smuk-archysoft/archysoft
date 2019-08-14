@@ -18,6 +18,7 @@ export const locale = {
             SIGNUP: 'Зареєструватися',
             SIGNUP_USER_EXISTS: 'Такий користувач вже існує',
             EMAIL: 'Email',
+            EMAIL_NOT_CONFIRMED: "Дану електронну адресу не підтверджено. Будь ласка перевірте ваш email.",
             USER_NAME: 'Ім\'я користувача',
             EMAIL_VALIDATION: 'Вкажіть свій email',
             USER_NAME_VALIDATION: 'Вкажіть своє ім\'я',

@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
       if (response.status === 1) {
         this.router.navigateByUrl('/');
       }
+      else if(response.message = 'Email Not Confirmed'){
+        this.authNotificationService.notify(this.translateService.instant('This email not confirmed yet. Please check your email.'), 'error');
+      }
       else {
         this.authNotificationService.notify(this.translateService.instant('AUTH.INVALID_LOGIN_OR_PASSWORD'), 'error');
       }
@@ -47,5 +50,4 @@ export class LoginComponent implements OnInit {
   navigateToSignUp() {
     this.router.navigate(['/auth/signup'])
   }
-
 }
