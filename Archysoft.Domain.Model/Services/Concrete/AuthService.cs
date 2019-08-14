@@ -94,10 +94,9 @@ namespace Archysoft.Domain.Model.Services.Concrete
 
             var token = _userRepository.GeneratePasswordResetToken(user);
             string uiUrl = _settingsService.UIUrlSettings.Url;
-            string url = $"{uiUrl}/auth/recover-password/?id={user.Id}&token={HttpUtility.UrlEncode(token)}";
-           
+            string url = $"{uiUrl}/auth/recover-password/?id={user.Id}&token={HttpUtility.UrlEncode(token)}";           
 
-            _emailNotificationService.SendMail(user.Email,"Recover Password", $"Для сброса пароля пройдите по ссылке: {url}");
+            _emailNotificationService.SendMail(user.Email,"Recover Password", $"To reset the password, follow the link: {url}");
         }
 
         public TokenModel Login(LoginModel loginModel)
