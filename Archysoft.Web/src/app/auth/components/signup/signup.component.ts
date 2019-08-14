@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
     passwordConfirm: '197346RKavbyz' 
   };
 
-  regExp: string | RegExp = "^(?=.*[a-z])(?=.*[A-Z])(?=\d*).{5,}$";
+  regExp: string | RegExp = "^.+$";
   myForm: FormGroup;
   loading = false;
 
